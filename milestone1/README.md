@@ -41,23 +41,23 @@ To solve this, we must first **ingest and clean** the raw email data.
 
 ### Step 1 — Import Required Libraries
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   import pandas as pd   `
+`   import pandas as pd   `
 
 ### Step 2 — Load the Dataset
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   df = pd.read_csv("emails.csv")  df.head()   `
+`   df = pd.read_csv("emails.csv")  df.head()   `
 
 ### Step 3 — Inspect Dataset Columns
 
 Different versions of this dataset use different column names like message, text, or body.
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   df.columns   `
+`   df.columns   `
 
 ### Step 4 — Extract Email Body Column
 
 (For this dataset, the email content is present in the body column.)
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   emails = df['body']   `
+`   emails = df['body']   `
 
 ### Step 5 — Basic Cleaning
 
@@ -66,11 +66,11 @@ Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQL
 *   Limit text length for faster processing
     
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   emails = emails.dropna()  emails = emails.str.slice(0, 1000)   `
+`   emails = emails.dropna()  emails = emails.str.slice(0, 1000)   `
 
 ### Step 6 — Save Cleaned Emails
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   emails.to_csv("cleaned_emails_stage1.csv", index=False)   `
+`   emails.to_csv("cleaned_emails_stage1.csv", index=False)   `
 
 This file will be used in the next milestone for NLP tasks.
 
@@ -99,5 +99,6 @@ Even though the dataset is in CSV format, the email text is still unstructured.D
 
 *   Carnegie Mellon University — Enron Email Corpus Archive
     
+
 
 **Author:** Charan Karthik**Project:** Email Intelligence using NLP & Knowledge Graph
