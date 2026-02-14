@@ -101,4 +101,6 @@ Even though the dataset is in CSV format, the email text is still unstructured.D
     
 
 
-**Author:** Charan Karthik**Project:** Email Intelligence using NLP & Knowledge Graph
+**Author:** Charan Karthik
+**Project:** Email Intelligence using NLP & Knowledge Graph
+
