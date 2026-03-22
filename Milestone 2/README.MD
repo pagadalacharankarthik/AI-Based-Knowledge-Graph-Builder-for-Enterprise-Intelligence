@@ -98,11 +98,10 @@ LIMIT 5;``
 ## 📁 Outputs
 - Structured Knowledge Graph in Neo4j
 - Node Types:
- - PERSON
- - ORG
- - LOCATION
- - DATE
-
+  - PERSON
+  - ORG
+  - LOCATION
+  - DATE
 - Relationship:
  - RELATED_TO
 
