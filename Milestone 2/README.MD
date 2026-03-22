@@ -87,16 +87,15 @@ Ensure:
 
 ### Get sample persons
 cypher
-MATCH (p:PERSON)
-RETURN p.name LIMIT 10;
+- MATCH (p:PERSON) RETURN p.name LIMIT 10;
 
-Top relationships by weight
+## Top relationships by weight
 MATCH (a:PERSON)-[r:RELATED_TO]-(b:PERSON)
 RETURN a.name, b.name, r.weight
 ORDER BY r.weight DESC
 LIMIT 5;
 
-📁 Outputs
+## 📁 Outputs
 Structured Knowledge Graph in Neo4j
 Node Types:
 PERSON
@@ -106,17 +105,17 @@ DATE
 Relationship:
 RELATED_TO
 
-⚠️ Challenges
+## ⚠️ Challenges
 Noisy entity extraction
 Duplicate entities
 Inconsistent naming
 
-✅ Solutions
+## ✅ Solutions
 Entity filtering rules
 Canonicalization using fuzzy matching
 Dynamic labeling in Neo4j
 
-🚀 Outcome
+## 🚀 Outcome
 Built a clean and queryable knowledge graph
 Enabled relationship discovery between entities
 Improved data exploration through graph queries
