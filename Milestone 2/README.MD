@@ -90,32 +90,32 @@ cypher
 - MATCH (p:PERSON) RETURN p.name LIMIT 10;
 
 ## Top relationships by weight
-MATCH (a:PERSON)-[r:RELATED_TO]-(b:PERSON)
+``MATCH (a:PERSON)-[r:RELATED_TO]-(b:PERSON)
 RETURN a.name, b.name, r.weight
 ORDER BY r.weight DESC
-LIMIT 5;
+LIMIT 5;``
 
 ## 📁 Outputs
-Structured Knowledge Graph in Neo4j
-Node Types:
-PERSON
-ORG
-LOCATION
-DATE
-Relationship:
-RELATED_TO
+- Structured Knowledge Graph in Neo4j
+- Node Types:
+ - PERSON
+ - ORG
+ - LOCATION
+ - DATE
+- Relationship:
+  - RELATED_TO
 
 ## ⚠️ Challenges
-Noisy entity extraction
-Duplicate entities
-Inconsistent naming
+- Noisy entity extraction
+- Duplicate entities
+- Inconsistent naming
 
 ## ✅ Solutions
-Entity filtering rules
-Canonicalization using fuzzy matching
-Dynamic labeling in Neo4j
+- Entity filtering rules
+- Canonicalization using fuzzy matching
+- Dynamic labeling in Neo4j
 
 ## 🚀 Outcome
-Built a clean and queryable knowledge graph
-Enabled relationship discovery between entities
-Improved data exploration through graph queries
+- Built a clean and queryable knowledge graph
+- Enabled relationship discovery between entities
+- Improved data exploration through graph queries
