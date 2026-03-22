@@ -102,8 +102,9 @@ LIMIT 5;``
  - ORG
  - LOCATION
  - DATE
+
 - Relationship:
-  - RELATED_TO
+ - RELATED_TO
 
 ## ⚠️ Challenges
 - Noisy entity extraction
